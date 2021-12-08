@@ -78,8 +78,12 @@ play.addEventListener('click', function () {
         square.style.height = `calc(100% / ${row})`;
         square.append(i + 1);
         containerGrid.append(square);
+        if (arrayBomb.includes(parseInt(square.innerText))) {
+            square.classList.add('hidebomb');
+        }
+        /*
         square.addEventListener('click', function () {
-            this.classList.add('clicked');
-        })
+            this.classList.add('clicked'); 
+        }) */
     }
 })
