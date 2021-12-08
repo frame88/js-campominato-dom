@@ -59,6 +59,18 @@ play.addEventListener('click', function () {
     }
 
     let numberSquare = row * col;
+
+    for (let x = 0; x < numBomb; x++) {
+
+        let numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
+        while (arrayBomb.includes(numberRand)) {
+            numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
+        }
+        arrayBomb.push(numberRand); 
+    }
+    console.log(arrayBomb); //controolo array
+    let points = parseInt(0); //inizializzo contatore
+
     for (let i = 0; i < numberSquare; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
