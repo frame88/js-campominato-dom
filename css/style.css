@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;
+}
+
+.playfield {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    border: 5px solid black;
+}
+
+header h1 {
+    display: inline;
+}
+
+
+:root {
+  --square-size: 10;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;
+}
+
+
+/*
+.container{
+    width: 500px;
+    height: 500px;
+    margin: 10vh auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
+*/
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / var(--square-size)); /*possiamo cambiare numero square con variabile*/
+  height: calc(100% / var(--square-size));
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.square > span {
+ color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
