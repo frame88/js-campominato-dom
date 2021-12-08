@@ -81,9 +81,21 @@ play.addEventListener('click', function () {
         if (arrayBomb.includes(parseInt(square.innerText))) {
             square.classList.add('hidebomb');
         }
-        /*
+        
         square.addEventListener('click', function () {
-            this.classList.add('clicked'); 
-        }) */
+            if (square.classList.contains('hidebomb')) {
+                square.classList.add('bomb');
+                let allBombs = document.querySelectorAll('.hidebomb');
+                for (let z = 0; z < allBombs.length; z++) {
+                    allBombs[z].classList.add('bomb');
+                }
+                risultato.append(`Hai perso!`);
+            }
+            else {
+                square.classList.add('clicked');
+                points = points + 1;
+                spanPoints.innerHTML = points;
+            }
+        })
     }
 })
