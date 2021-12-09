@@ -62,13 +62,12 @@ play.addEventListener('click', function () {
 
     let numberSquare = row * col;
 
-    for (let x = 0; x < numBomb; x++) {
-
+    while (arrayBomb.length < 16) {
         let numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
-        while (arrayBomb.includes(numberRand)) {
+        if (arrayBomb.includes(numberRand) == false) {
             numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
+            arrayBomb.push(numberRand); 
         }
-        arrayBomb.push(numberRand); 
     }
     console.log(arrayBomb); //controolo array
     let points = parseInt(0); //inizializzo contatore
