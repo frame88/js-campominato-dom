@@ -8,22 +8,16 @@ html{
     font-size: 100%;
 }
 
-.playfield {
-    display: flex;
-    justify-content: center;
-    width: 500px;
-    height: 500px;
-    border: 5px solid black;
+:root {
+  --square-size: 10;
 }
+
 
 header h1 {
     display: inline;
 }
 
 
-:root {
-  --square-size: 10;
-}
 
 
 *{
@@ -47,15 +41,22 @@ html{
     border: 2px solid black;
 }
 */
+.playfield {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    border: 5px solid black;
+}
 
 .square {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: calc(100% / var(--square-size)); /*possiamo cambiare numero square con variabile*/
-  height: calc(100% / var(--square-size));
-  cursor: pointer;
-  border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / var(--square-size)); /*possiamo cambiare numero square con variabile*/
+    height: calc(100% / var(--square-size));
+    cursor: pointer;
+    border: 2px solid black;
 }
 
 .square > span {

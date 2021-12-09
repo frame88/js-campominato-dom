@@ -36,9 +36,11 @@ RESTART
 */
 
 const play = document.getElementById('play');
-const containerGrid = document.getElementById('container');
+const containerGrid = document.getElementById('grid');
+const numBomb = 16;
+let arrayBomb = [];
 play.addEventListener('click', function () {
-    container.innerHTML = '';
+    grid.innerHTML = '';
 
     const value = document.getElementById('level').value;
 
