@@ -61,16 +61,12 @@ play.addEventListener('click', function () {
     }
 
     let numberSquare = row * col;
-    console.log(numberSquare);
 
     while (arrayBomb.length < 16) {
         let numberRand = Math.floor(Math.random() * numberSquare) + 1;
-        console.log(numberRand);
         if (arrayBomb.includes(numberRand) == false) {
             //numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
             arrayBomb.push(numberRand); 
-            console.log(numberRand);
-            console.log(arrayBomb);
         }
     }
     console.log(arrayBomb); //controolo array
