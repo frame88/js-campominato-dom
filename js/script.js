@@ -47,26 +47,30 @@ play.addEventListener('click', function () {
     let col = 0;
     let row = 0;
 
-    if (value == 'padawan') {
+    if (value == '1') {
         row = 10;
         col = 10;
     }
-    else if (value == 'jedi') {
+    else if (value == '2') {
         row = 9;
         col = 9;
     }
-    else if (value == 'masterjedi') {
+    else if (value == '3') {
         row = 7;
         col = 7;
     }
 
     let numberSquare = row * col;
+    console.log(numberSquare);
 
     while (arrayBomb.length < 16) {
-        let numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
+        let numberRand = Math.floor(Math.random() * numberSquare) + 1;
+        console.log(numberRand);
         if (arrayBomb.includes(numberRand) == false) {
-            numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
+            //numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
             arrayBomb.push(numberRand); 
+            console.log(numberRand);
+            console.log(arrayBomb);
         }
     }
     console.log(arrayBomb); //controolo array
