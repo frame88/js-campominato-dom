@@ -64,6 +64,16 @@ html{
  color: black;
 }
 
+.bomb {
+    background-color: red;
+}
+
+.clicked {
+    background-color: blue;
+}
+
+
+
 
 
 

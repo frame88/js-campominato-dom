@@ -72,7 +72,6 @@ play.addEventListener('click', function () {
     }
     console.log(arrayBomb); //controolo array
     let points = parseInt(0); //inizializzo contatore
-
     for (let i = 0; i < numberSquare; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
@@ -92,12 +91,14 @@ play.addEventListener('click', function () {
                     allBombs[z].classList.add('bomb');
                 }
                 risultato.append(`Hai perso!`);
+                ris = points.toString();
+                risultato.innerHTML += ' ' + ris + ' punti';
             }
             else {
                 square.classList.add('clicked');
                 points = points + 1;
-                points.innerHTML = points;
             }
+            console.log(points);
         })
     }
 })
