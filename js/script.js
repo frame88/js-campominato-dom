@@ -39,6 +39,7 @@ const play = document.getElementById('play');
 const containerGrid = document.getElementById('grid');
 const numBomb = 16;
 let arrayBomb = [];
+const risultato = document.querySelector('.risultato');
 play.addEventListener('click', function () {
     grid.innerHTML = '';
 
@@ -95,7 +96,7 @@ play.addEventListener('click', function () {
             else {
                 square.classList.add('clicked');
                 points = points + 1;
-                spanPoints.innerHTML = points;
+                points.innerHTML = points;
             }
         })
     }
